@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html
+ lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let R = 'Rock';
+        let P = 'Paper';
+        let S = 'Sissors';
+        let humanScore = 0;
+        let computerScore = 0;
+        function getComputerChoice(){
+           return (Math.floor(Math.random() * 3));
+        }
+        let picknumber = getComputerChoice()
+        if (picknumber == 0) {
+          console.log(R);
+        }else if(picknumber == 1){
+          console.log(P);
+        }else {
+          console.log(S);
+        }
+        function getHumanChoice(){
+            let userInput = prompt("Write your choice?:",'Rock')
+            return userInput[0].toUpperCase() + userInput.slice(1,userInput.length);
+            
+        }
+        function playRound(getComputerChoice,getHumanChoice){
+             if (getComputerChoice == R && getHumanChoice == 'Papper'){
+                computerScore +=  1;
+             }else if (getComputerChoice == P && getHumanChoice == 'Rock'){
+                humanScore += 1;
+             }else if (getComputerChoice == S && getHumanChoice == 'Paper'
+            
+             )
+        }
+
+    </script>
+    
+</body>
+</html>
